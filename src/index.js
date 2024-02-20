@@ -1,8 +1,9 @@
 const express=require("express");
 const app=express();
+require("dotenv").config();
 app.get("/",async(req,res)=>{
     try {
-        res.send("App is running");
+        res.send(`App is running. ${process.env.app}`);
     } catch (error) {
         res.send(error)
     }
