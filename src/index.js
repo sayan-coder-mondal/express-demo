@@ -30,7 +30,8 @@ app.get("/",async(req,res)=>{
 
 app.get("/home",async(req,res)=>{
     try {
-        res.render("home");
+        res.send("home")
+        // res.render("home");
     } catch (error) {
         res.send(error)
     }
